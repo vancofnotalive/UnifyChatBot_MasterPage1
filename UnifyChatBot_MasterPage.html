@@ -1,0 +1,3826 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- <link rel="stylesheet" href="./stylecss/UnifyChatBort_MasterPage_style.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main id="PageForPC">
+        <section class="pc">
+            <!-- @RenderBody(); -->
+<!-- @{
+    User user = FindData.Db.Users.SingleOrDefault(user => user.UserUniqueId == FindData.UserUniqueId);
+    if (user == null)
+    {
+        user = new User();
+    }
+} -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    * {
+        padding: 0 !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+    img {
+        width: 100%;
+        flex-shrink: 0 !important;
+    }
+
+    input:focus {
+        border: none;
+        outline: none;
+    }
+
+    main {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(255, 255, 255);
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .pc {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .signUpForm {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .bg-img {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .gs-5 {
+        height: 5vh;
+        width: 100%;
+    }
+
+    .bg-img img {
+        width: 50%;
+    }
+
+
+    .form {
+        height: 100%;
+        width: 50%;
+        display: inline-block;
+    }
+
+    .signup-form {
+        height: 100%;
+        width: 100%;
+        scale: 0.8;
+        /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+        border: 0.1vh solid transparent;
+        border-radius: 2vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .signup-form h1 {
+            align-self: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    .row-signup {
+        position: relative;
+        height: fit-content;
+        width: 100%;
+        align-self: center;
+        justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input-box {
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3vh !important;
+    }
+
+        .input-box strong {
+            font-weight: 600;
+        }
+
+        .input-box input {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 3vh;
+            border: 0;
+            border-bottom: 0.1vh solid black;
+        }
+
+    .row-signup:last-child input {
+        width: 100%;
+    }
+
+    .mid {
+        position: absolute;
+        right: 50%;
+        translate: 50% 0;
+    }
+
+    .input {
+        position: relative;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding-bottom: 3vh !important;
+    }
+
+        .input strong {
+            font-size: 1.7vw;
+            font-weight: 600;
+        }
+
+        .input input {
+            position: absolute;
+            bottom: 0%;
+            height: 3vh;
+            width: 100%;
+            border: 0;
+            border-bottom: 0.1vh solid black;
+        }
+
+    .how-you-heard {
+        position: relative;
+        border-bottom: 0.1vh solid black;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 2vh !important;
+        justify-content: space-between;
+    }
+
+        .how-you-heard i {
+            padding: 0 1vw !important;
+            cursor: pointer;
+        }
+
+    .heading-signup {
+        position: relative;
+        width: 100%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .heading-signup img {
+            width: 8%;
+        }
+
+        .heading-signup h1 {
+            padding: 0vw 2vw !important;
+        }
+
+    .how-you-heard strong {
+    }
+
+    .nb-dropdown-menu {
+        position: absolute;
+        height: fit-content;
+        width: 100%;
+        background-color: rgb(240, 240, 240);
+        bottom: 100%;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+        .nb-dropdown-menu input:hover {
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+
+    select {
+        height: 5vh;
+        border: none;
+        border-bottom: 0.1vh solid black;
+    }
+
+        select:focus {
+            border-radius: 0;
+            outline: none;
+        }
+
+        select option {
+            font-size: 1vw;
+        }
+
+    .safe {
+        font-size: 1vw;
+        font-weight: 400;
+        width: 80%;
+    }
+
+    .action-links {
+        height: fit-content;
+        width: 100%;
+        align-self: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .action-links button {
+            background-color: rgb(2, 99, 184);
+            padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+            border: none; /* Removed border for a cleaner look */
+            border-radius: 2vw; /* Rounded corners */
+            color: white;
+            text-decoration: none; /* Removes underline from links */
+            font-size: 1.2vw; /* Increases text size for better readability */
+            font-weight: bold; /* Makes the text bold */
+            display: inline-block; /* Ensures proper spacing between buttons */
+            text-align: center; /* Centers text within the buttons */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+            margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+        }
+
+        .action-links a {
+            background-color: rgb(2, 99, 184);
+            padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+            border: none; /* Removed border for a cleaner look */
+            border-radius: 2vw; /* Rounded corners */
+            color: white;
+            text-decoration: none; /* Removes underline from links */
+            font-size: 1.2vw; /* Increases text size for better readability */
+            font-weight: bold; /* Makes the text bold */
+            display: inline-block; /* Ensures proper spacing between buttons */
+            text-align: center; /* Centers text within the buttons */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+            margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+        }
+
+        .action-links button:hover {
+            background-color: rgb(22, 131, 225); /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .action-links button:active {
+            background-color: rgb(20, 117, 201); /* Even darker blue when active */
+            transform: translateY(1px); /* Slight sink on active */
+        }
+
+        .action-links button:last-child {
+            background-color: rgb(19, 19, 19);
+        }
+
+    .error {
+        height: 3vh;
+        display: flex;
+        align-items: center;
+        color: red;
+        overflow: hidden;
+        width: 100%;
+    }
+
+        .error h6 {
+            font-size: 3vh;
+            animation: showUp 0.1s ease-out;
+        }
+
+    keyframes showUp {
+        0%
+
+    {
+        translate: 0 -100%;
+        opacity: 0;
+    }
+
+    }
+
+
+
+
+
+
+
+
+    /* tablet */
+    media screen and (min-width: 768px) {
+        main
+
+    {
+    }
+
+    .input-box strong {
+        padding-right: 5vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .input-box input {
+        width: 100% !important;
+    }
+
+    .dob strong {
+        padding-right: 10vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+        font-weight: 400;
+    }
+
+    .nb-dropdown-menu input {
+        font-size: 1.2vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1.5vw;
+    }
+
+    }
+
+    /* Styles for small to medium desktops (min-width: 1024px) */
+    media screen and (min-width: 1024px) {
+        main
+
+    {
+        background-color: white;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1.5vw !important;
+        padding-right: 7vw !important;
+    }
+
+    .input strong {
+        font-size: 1.5vw !important;
+    }
+
+    .dob strong {
+        padding-right: 12vw !important;
+        font-size: 1.5vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    }
+
+    /* Styles for large desktops (min-width: 1440px) */
+    media screen and (min-width: 1440px) {
+        main
+
+    {
+        background-color: white;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 0.9vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1vw;
+    }
+
+    .date-of-birth {
+        font-size: 0.9vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+        padding-right: 10vw !important;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .safe {
+        font-size: 0.8vw;
+    }
+
+    }
+
+    /* Styles for ultra-wide desktops (min-width: 1920px) */
+    media screen and (min-width: 1920px) {
+        main
+
+    {
+        background-color: white;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 1vw;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    }
+
+    /* Styles for large 4K monitors (min-width: 2560px) */
+    media screen and (min-width: 2560px) {
+    }
+
+    /* Styles for 5K and ultra-wide monitors (min-width: 3840px) */
+    media screen and (min-width: 3840px) {
+    }
+
+    div {
+        display: none;
+    }
+    /*
+                                            .index {
+                                                height: 100%;
+                                                width: 100%;
+                                                background-color: red;
+                                                display: flex;
+                                                justify-content: space-between;
+                                            }
+
+                                            .sidebar {
+                                                height: 100vh;
+                                                width: 20vw;
+                                                background-color: green;
+                                            }
+
+                                            .main-window {
+                                                height: 100vh;
+                                                width: 80vw;
+                                                background-color: blue;
+                                            }
+
+                                            .chat {
+                                                height: 90%;
+                                                width: 100%;
+                                                background-color: aqua;
+                                            }
+
+                                            .send-box {
+                                                height: 10%;
+                                                width: 100%;
+                                                background-color: blueviolet;
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                            }
+
+                                            .send-style-box {
+                                                height: 30%;
+                                                width: 100%;
+                                                background-color: chartreuse;
+                                            }
+
+                                            .send-message {
+                                                height: 70%;
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                background-color: blue;
+                                            }
+
+                                            .send-message-input {
+                                                height: 70%;
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                            }
+
+                                                .send-message-input input {
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    border: 0.1vh solid black;
+                                                    border-radius: 2vw;
+                                                }
+
+                                            .send-message button {
+                                                height: 100%;
+                                                width: 10%;
+                                                color: red;
+                                            }
+
+                                            .message {
+                                                height: fit-content;
+                                                width: 100%;
+                                                background-color: crimson;
+                                                padding: 1% 0 !important;
+                                                display: flex;
+                                            }
+
+                                            .pfp {
+                                                margin: 0 1vw !important;
+                                                width: 3vw;
+                                                height: 3vw;
+                                                border: 0.1vh solid black;
+                                                border-radius: 50%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                background-color: white;
+                                                overflow: hidden;
+                                            }
+
+                                            .message-details {
+                                                height: 3vw;
+                                                width: 100%;
+                                                background-color: gold;
+                                                display: flex;
+                                            }
+
+                                            .content {
+                                                width: calc(100% - 10vw);
+                                                height: fit-content;
+                                            }
+
+                                                .content h1 {
+                                                    height: 2vw;
+                                                    width: 100%;
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    font-size: 1.5vw;
+                                                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                                }
+
+                                                .content p {
+                                                    font-size: 1vw;
+                                                } */
+
+
+
+
+    .index {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .sidebar {
+        position: relative;
+        height: 100vh;
+        width: 20vw;
+        background-color: rgb(224, 224, 224);
+        border: 0.1px solid transparent;
+        border-top-right-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-window {
+        height: 100vh;
+        width: 80vw;
+        background-color:;
+    }
+
+    .chat {
+        height: 90%;
+        width: 100%;
+        background-color: white;
+        overflow-y: scroll;
+    }
+
+        .chat::-webkit-scrollbar {
+            display: none;
+        }
+
+    .send-box {
+        height: 10%;
+        width: 100%;
+        background-color:;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .send-style-box {
+        height: 30%;
+        width: 100%;
+        background-color:;
+    }
+
+    .send-message {
+        position: relative;
+        height: 50%;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .send-message-input {
+        height: 70%;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .send-message-input input {
+            height: 100%;
+            width: 100%;
+            border: 0.1vh solid transparent;
+            border-radius: 2vw;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .send-message-input input {
+            text-indent: 1vw;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    .send-message button {
+        height: 70%;
+        width: 5%;
+        border: 0.1vh solid transparent;
+        border-left: 0;
+        border-top-right-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+        cursor: pointer;
+        background-color: rgb(230, 230, 230);
+    }
+
+        .send-message button i {
+            color: #000;
+            font-size: 1.5vw;
+            transition: 0.1s;
+        }
+
+        .send-message button:hover {
+            background-color: black;
+        }
+
+            .send-message button:hover i {
+                color: white;
+            }
+
+        .send-message button:active i {
+            scale: 0.8;
+        }
+
+    .send-message span {
+        position: absolute;
+        right: 0;
+        height: 70%;
+        width: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .message {
+        height: fit-content;
+        width: 100%;
+        background-color:;
+        padding: 1% 0 !important;
+        display: flex;
+    }
+
+    .pfp {
+        margin: 0 1vw !important;
+        width: 3vw;
+        height: 3vw;
+        border: 0.1vh solid transparent;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .message-details {
+        height: 3vw;
+        width: 100%;
+        background-color: gold;
+        display: flex;
+    }
+
+    .content {
+        width: calc(100% - 10vw);
+        height: fit-content;
+    }
+
+        .content h1 {
+            height: 2vw;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            font-size: 1vw;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 1% !important;
+        }
+
+        .content p {
+            padding: 0.5% 0 !important;
+            font-size: 0.8vw;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-top: 0.1vh solid rgb(241, 241, 241);
+        }
+
+    .userMessage {
+    }
+
+    .userPfp img {
+        width: 70%;
+    }
+
+    .sidebar-actions {
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .close-sidebar {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .close-sidebar::after {
+            border: 0.1vh solid transparent;
+            border-radius: 50%;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: black;
+            position: absolute;
+        }
+
+        .close-sidebar i {
+            position: relative;
+            border-radius: 50%;
+            z-index: +1;
+            font-size: 1.5vw;
+            color: black;
+        }
+
+    .history {
+        height: 100%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: 0.1px solid black;
+        margin-left: 1vw !important;
+    }
+
+        .history h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1vw;
+        }
+
+    i {
+        cursor: pointer;
+    }
+
+    .history-actions {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+        .history-actions i {
+            position: relative;
+            font-size: 1vw;
+            border: 0.1vh solid transparent;
+            color: #000;
+        }
+
+            .history-actions i::after, .close-sidebar i::after, .logout::after {
+                content: "New Chat";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50% 50%;
+                background-color: black;
+                color: white;
+                padding: 0.5vh 1vh !important;
+                border: 0.1px solid transparent;
+                border-radius: 2vw;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.5vw;
+                white-space: nowrap;
+                overflow: hidden;
+                opacity: 0;
+                transition: 50ms ease-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: fit-content;
+                scale: 0;
+            }
+
+    .close-sidebar i::after {
+        content: "Account";
+    }
+
+    .logout::after {
+        content: "Logout";
+    }
+
+    .history-actions i:hover::after, .close-sidebar i:hover::after, .logout:hover::after {
+        scale: 1;
+        opacity: 1;
+    }
+
+    .chat-history {
+        height: 7vh;
+        width: 90%;
+        background-color: rgb(250, 250, 250);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+        border-radius: 0.5vw;
+        align-self: center;
+        margin: 1vh 0 !important;
+        transition: 0.1s ease-out;
+        cursor: pointer;
+    }
+
+        .chat-history:hover {
+            scale: 1.050;
+        }
+
+    .chat-history-datetime {
+        height: 2vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .history-heading {
+        height: 5vh;
+        width: 100%;
+        border-bottom: 0.1vh solid rgb(175, 175, 175);
+        display: flex;
+        align-items: center;
+    }
+
+        .history-heading h1 {
+            font-size: 0.8vw;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            width: 95%;
+            padding: 5% !important;
+        }
+
+    .chat-history-datetime strong {
+        font-size: 1vh;
+        padding: 5% !important;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .chat-history-datetime i {
+        padding: 5% !important;
+        font-size: 1vh;
+    }
+
+    .accountDetails {
+        position: fixed;
+        top: 6vh;
+        left: 10vw;
+        background-color: white;
+        padding: 0.5vh !important;
+        z-index: +9999;
+        border: 1px solid transparent;
+        border-radius: 5vw;
+        display: flex;
+        opacity: 0;
+        scale: 0;
+    }
+
+        .accountDetails i {
+            font-size: 5vh;
+        }
+
+    .blur {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        z-index: +999;
+        opacity: 0;
+        display: none;
+    }
+
+    .account-details-information {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.5vw !important;
+        width: 10vw;
+    }
+
+        .account-details-information h1, h2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .account-details-information h1 {
+            font-size: 1.5vh;
+        }
+
+        .account-details-information h2 {
+            font-size: 1vh;
+        }
+
+    .logout {
+        position: absolute;
+        bottom: 50%;
+        translate: -100% 100%;
+        right: 0;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        padding: 1% !important;
+    }
+
+        .logout i {
+            font-size: 1.5vh;
+        }
+
+            .logout i:last-child {
+                display: none;
+                position: absolute;
+            }
+
+        .logout:hover i:first-child {
+            display: none;
+            position: absolute;
+        }
+
+        .logout:hover i:last-child {
+            display: block;
+            position: relative;
+        }
+
+    .chatsForHistory {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow-y: scroll;
+        background-color: white;
+        display: none;
+    }
+
+    .my-chat {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: red;
+        z-index: +99999999;
+        overflow-y: scroll;
+    }
+
+    .chat-history-container {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #blur-visibility {
+        position: absolute;
+        height: 10vh;
+        width: 100%;
+        bottom: 10vh;
+        background: linear-gradient(to top, rgb(224, 224, 224), transparent);
+        z-index: +1;
+    }
+
+    .prevent {
+        border-top: 1px solid black;
+        position: absolute;
+        bottom: 0;
+        height: 10vh;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        z-index: +1;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+        .prevent h1 {
+            font-size: 2.5vh;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .prevent button {
+            position: relative;
+            background-color: #000;
+            padding: 1vh 3vw !important;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 2vw;
+            cursor: pointer;
+        }
+
+            .prevent button::after {
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                translate: -50% -50%;
+                content: "Go back to current chat";
+                height: fit-content;
+                width: fit-content;
+                padding: 0.5vh 1vw !important;
+                background-color: #000;
+                color: white;
+                white-space: nowrap;
+                border: 1px solid transparent;
+                border-radius: 1vw;
+                font-size: 1vh;
+                scale: 0;
+                opacity: 0;
+                transition: 0.1s;
+            }
+
+            .prevent button:hover {
+                background-color: #252525;
+            }
+
+                .prevent button:hover::after {
+                    scale: 1;
+                    opacity: 1;
+                }
+
+
+
+
+
+                * {
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+    *::-webkit-scrollbar {
+        
+    }
+    
+img {
+    width: 100%;
+    flex-shrink: 0 !important;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+#PageForPhone {
+    height: 100dvh;
+    width: 100dvw;
+    display: none;
+}
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none !important;
+}
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.pc {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.signUpForm {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.gs-5 {
+    height: 5vh;
+    width: 100%;
+}
+
+.bg-img img {
+    width: 50%;
+}
+
+
+.form {
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+}
+
+.signup-form {
+    height: 100%;
+    width: 100%;
+    scale: 0.8;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+    border: 0.1vh solid transparent;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+    .signup-form h1 {
+        align-self: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.row-signup {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3vh !important;
+}
+
+    .input-box strong {
+        font-weight: 600;
+    }
+
+    .input-box input {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 3vh;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.row-signup:last-child input {
+    width: 100%;
+}
+
+.mid {
+    position: absolute;
+    right: 50%;
+    translate: 50% 0;
+}
+
+.input {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-bottom: 3vh !important;
+}
+
+    .input strong {
+        font-size: 1.7vw;
+        font-weight: 600;
+    }
+
+    .input input {
+        position: absolute;
+        bottom: 0%;
+        height: 3vh;
+        width: 100%;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.how-you-heard {
+    position: relative;
+    border-bottom: 0.1vh solid black;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 2vh !important;
+    justify-content: space-between;
+}
+
+    .how-you-heard i {
+        padding: 0 1vw !important;
+        cursor: pointer;
+    }
+
+.heading-signup {
+    position: relative;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .heading-signup img {
+        width: 8%;
+    }
+
+    .heading-signup h1 {
+        padding: 0vw 2vw !important;
+    }
+
+.how-you-heard strong {
+}
+
+.nb-dropdown-menu {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    bottom: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .nb-dropdown-menu input:hover {
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+
+select {
+    height: 5vh;
+    border: none;
+    border-bottom: 0.1vh solid black;
+}
+
+    select:focus {
+        border-radius: 0;
+        outline: none;
+    }
+
+    select option {
+        font-size: 1vw;
+    }
+
+.safe {
+    font-size: 1vw;
+    font-weight: 400;
+    width: 80%;
+}
+
+.action-links {
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .action-links button {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+    .action-links a {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+
+        .action-links button:hover {
+            background-color: rgb(22, 131, 225); /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .action-links button:active {
+            background-color: rgb(20, 117, 201); /* Even darker blue when active */
+            transform: translateY(1px); /* Slight sink on active */
+        }
+
+        .action-links button:last-child {
+            background-color: rgb(19, 19, 19);
+        }
+
+.error {
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    color: red;
+    overflow: hidden;
+    width: 100%;
+}
+
+    .error h6 {
+        font-size: 3vh;
+        animation: showUp 0.1s ease-out;
+    }
+
+@keyframes showUp {
+    0% {
+        translate: 0 -100%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    main {
+    }
+
+    .input-box strong {
+        padding-right: 5vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .input-box input {
+        width: 100% !important;
+    }
+
+    .dob strong {
+        padding-right: 10vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+        font-weight: 400;
+    }
+
+    .nb-dropdown-menu input {
+        font-size: 1.2vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1.5vw;
+    }
+}
+
+/* Styles for small to medium desktops (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    main {
+        background-color: white;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1.5vw !important;
+        padding-right: 7vw !important;
+    }
+
+    .input strong {
+        font-size: 1.5vw !important;
+    }
+
+    .dob strong {
+        padding-right: 12vw !important;
+        font-size: 1.5vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large desktops (min-width: 1440px) */
+@media screen and (min-width: 1440px) {
+    main {
+        background-color: white;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 0.9vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1vw;
+    }
+
+    .date-of-birth {
+        font-size: 0.9vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+        padding-right: 10vw !important;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .safe {
+        font-size: 0.8vw;
+    }
+}
+
+/* Styles for ultra-wide desktops (min-width: 1920px) */
+@media screen and (min-width: 1920px) {
+    main {
+        background-color: white;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 1vw;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large 4K monitors (min-width: 2560px) */
+@media screen and (min-width: 2560px) {
+}
+
+/* Styles for 5K and ultra-wide monitors (min-width: 3840px) */
+@media screen and (min-width: 3840px) {
+}
+
+div {
+    display: none;
+}
+
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+    *::-webkit-scrollbar {
+    }
+
+img {
+    width: 100%;
+    flex-shrink: 0 !important;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.pc {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.signUpForm {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.gs-5 {
+    height: 5vh;
+    width: 100%;
+}
+
+.bg-img img {
+    width: 50%;
+}
+
+
+.form {
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+}
+
+.signup-form {
+    height: 100%;
+    width: 100%;
+    scale: 0.8;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+    border: 0.1vh solid transparent;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+    .signup-form h1 {
+        align-self: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.row-signup {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3vh !important;
+}
+
+    .input-box strong {
+        font-weight: 600;
+    }
+
+    .input-box input {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 3vh;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.row-signup:last-child input {
+    width: 100%;
+}
+
+.mid {
+    position: absolute;
+    right: 50%;
+    translate: 50% 0;
+}
+
+.input {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-bottom: 3vh !important;
+}
+
+    .input strong {
+        font-size: 1.7vw;
+        font-weight: 600;
+    }
+
+    .input input {
+        position: absolute;
+        bottom: 0%;
+        height: 3vh;
+        width: 100%;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.how-you-heard {
+    position: relative;
+    border-bottom: 0.1vh solid black;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 2vh !important;
+    justify-content: space-between;
+}
+
+    .how-you-heard i {
+        padding: 0 1vw !important;
+        cursor: pointer;
+    }
+
+.heading-signup {
+    position: relative;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .heading-signup img {
+        width: 8%;
+    }
+
+    .heading-signup h1 {
+        padding: 0vw 2vw !important;
+    }
+
+.how-you-heard strong {
+}
+
+.nb-dropdown-menu {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    bottom: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .nb-dropdown-menu input:hover {
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+
+select {
+    height: 5vh;
+    border: none;
+    border-bottom: 0.1vh solid black;
+}
+
+    select:focus {
+        border-radius: 0;
+        outline: none;
+    }
+
+    select option {
+        font-size: 1vw;
+    }
+
+.safe {
+    font-size: 1vw;
+    font-weight: 400;
+    width: 80%;
+}
+
+.action-links {
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .action-links button {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+
+    .action-links a {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+
+    .action-links button:hover {
+        background-color: rgb(22, 131, 225); /* Darker blue on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+    }
+
+    .action-links button:active {
+        background-color: rgb(20, 117, 201); /* Even darker blue when active */
+        transform: translateY(1px); /* Slight sink on active */
+    }
+
+    .action-links button:last-child {
+        background-color: rgb(19, 19, 19);
+    }
+
+.error {
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    color: red;
+    overflow: hidden;
+    width: 100%;
+}
+
+    .error h6 {
+        font-size: 3vh;
+        animation: showUp 0.1s ease-out;
+    }
+
+@keyframes showUp {
+    0% {
+        translate: 0 -100%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    main {
+    }
+
+    .input-box strong {
+        padding-right: 5vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .input-box input {
+        width: 100% !important;
+    }
+
+    .dob strong {
+        padding-right: 10vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+        font-weight: 400;
+    }
+
+    .nb-dropdown-menu input {
+        font-size: 1.2vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1.5vw;
+    }
+}
+
+/* Styles for small to medium desktops (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    main {
+        background-color: white;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1.5vw !important;
+        padding-right: 7vw !important;
+    }
+
+    .input strong {
+        font-size: 1.5vw !important;
+    }
+
+    .dob strong {
+        padding-right: 12vw !important;
+        font-size: 1.5vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large desktops (min-width: 1440px) */
+@media screen and (min-width: 1440px) {
+    main {
+        background-color: white;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 0.9vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1vw;
+    }
+
+    .date-of-birth {
+        font-size: 0.9vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+        padding-right: 10vw !important;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .safe {
+        font-size: 0.8vw;
+    }
+}
+
+/* Styles for ultra-wide desktops (min-width: 1920px) */
+@media screen and (min-width: 1920px) {
+    main {
+        background-color: white;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 1vw;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large 4K monitors (min-width: 2560px) */
+@media screen and (min-width: 2560px) {
+}
+
+/* Styles for 5K and ultra-wide monitors (min-width: 3840px) */
+@media screen and (min-width: 3840px) {
+}
+
+div {
+    display: none;
+}
+/* 
+.index {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 20vw;
+    background-color: green;
+}
+
+.main-window {
+    height: 100vh;
+    width: 80vw;
+    background-color: blue;
+}
+
+.chat {
+    height: 90%;
+    width: 100%;
+    background-color: aqua;
+}
+
+.send-box {
+    height: 10%;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-style-box {
+    height: 30%;
+    width: 100%;
+    background-color: chartreuse;
+}
+
+.send-message {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+
+.send-message-input {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .send-message-input input {
+        height: 100%;
+        width: 100%;
+        border: 0.1vh solid black;
+        border-radius: 2vw;
+    }
+
+.send-message button {
+    height: 100%;
+    width: 10%;
+    color: red;
+}
+
+.message {
+    height: fit-content;
+    width: 100%;
+    background-color: crimson;
+    padding: 1% 0 !important;
+    display: flex;
+}
+
+.pfp {
+    margin: 0 1vw !important;
+    width: 3vw;
+    height: 3vw;
+    border: 0.1vh solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+.message-details {
+    height: 3vw;
+    width: 100%;
+    background-color: gold;
+    display: flex;
+}
+
+.content {
+    width: calc(100% - 10vw);
+    height: fit-content;
+}
+
+    .content h1 {
+        height: 2vw;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        font-size: 1.5vw;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .content p {
+        font-size: 1vw;
+    } */
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+    *::-webkit-scrollbar {
+        
+    }
+    
+img {
+    width: 100%;
+    flex-shrink: 0 !important;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none !important;
+}
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.pc {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.signUpForm {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.gs-5 {
+    height: 5vh;
+    width: 100%;
+}
+
+.bg-img img {
+    width: 50%;
+}
+
+
+.form {
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+}
+
+.signup-form {
+    height: 100%;
+    width: 100%;
+    scale: 0.8;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+    border: 0.1vh solid transparent;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+    .signup-form h1 {
+        align-self: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.row-signup {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3vh !important;
+}
+
+    .input-box strong {
+        font-weight: 600;
+    }
+
+    .input-box input {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 3vh;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.row-signup:last-child input {
+    width: 100%;
+}
+
+.mid {
+    position: absolute;
+    right: 50%;
+    translate: 50% 0;
+}
+
+.input {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-bottom: 3vh !important;
+}
+
+    .input strong {
+        font-size: 1.7vw;
+        font-weight: 600;
+    }
+
+    .input input {
+        position: absolute;
+        bottom: 0%;
+        height: 3vh;
+        width: 100%;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.how-you-heard {
+    position: relative;
+    border-bottom: 0.1vh solid black;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 2vh !important;
+    justify-content: space-between;
+}
+
+    .how-you-heard i {
+        padding: 0 1vw !important;
+        cursor: pointer;
+    }
+
+.heading-signup {
+    position: relative;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .heading-signup img {
+        width: 8%;
+    }
+
+    .heading-signup h1 {
+        padding: 0vw 2vw !important;
+    }
+
+.how-you-heard strong {
+}
+
+.nb-dropdown-menu {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    bottom: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .nb-dropdown-menu input:hover {
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+
+select {
+    height: 5vh;
+    border: none;
+    border-bottom: 0.1vh solid black;
+}
+
+    select:focus {
+        border-radius: 0;
+        outline: none;
+    }
+
+    select option {
+        font-size: 1vw;
+    }
+
+.safe {
+    font-size: 1vw;
+    font-weight: 400;
+    width: 80%;
+}
+
+.action-links {
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .action-links button {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+    .action-links a {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+
+        .action-links button:hover {
+            background-color: rgb(22, 131, 225); /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .action-links button:active {
+            background-color: rgb(20, 117, 201); /* Even darker blue when active */
+            transform: translateY(1px); /* Slight sink on active */
+        }
+
+        .action-links button:last-child {
+            background-color: rgb(19, 19, 19);
+        }
+
+.error {
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    color: red;
+    overflow: hidden;
+    width: 100%;
+}
+
+    .error h6 {
+        font-size: 3vh;
+        animation: showUp 0.1s ease-out;
+    }
+
+@keyframes showUp {
+    0% {
+        translate: 0 -100%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    main {
+    }
+
+    .input-box strong {
+        padding-right: 5vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .input-box input {
+        width: 100% !important;
+    }
+
+    .dob strong {
+        padding-right: 10vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+        font-weight: 400;
+    }
+
+    .nb-dropdown-menu input {
+        font-size: 1.2vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1.5vw;
+    }
+}
+
+/* Styles for small to medium desktops (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    main {
+        background-color: white;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1.5vw !important;
+        padding-right: 7vw !important;
+    }
+
+    .input strong {
+        font-size: 1.5vw !important;
+    }
+
+    .dob strong {
+        padding-right: 12vw !important;
+        font-size: 1.5vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large desktops (min-width: 1440px) */
+@media screen and (min-width: 1440px) {
+    main {
+        background-color: white;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 0.9vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1vw;
+    }
+
+    .date-of-birth {
+        font-size: 0.9vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+        padding-right: 10vw !important;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .safe {
+        font-size: 0.8vw;
+    }
+}
+
+/* Styles for ultra-wide desktops (min-width: 1920px) */
+@media screen and (min-width: 1920px) {
+    main {
+        background-color: white;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 1vw;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large 4K monitors (min-width: 2560px) */
+@media screen and (min-width: 2560px) {
+}
+
+/* Styles for 5K and ultra-wide monitors (min-width: 3840px) */
+@media screen and (min-width: 3840px) {
+}
+
+div {
+    display: none;
+}
+
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+    *::-webkit-scrollbar {
+    }
+
+img {
+    width: 100%;
+    flex-shrink: 0 !important;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.pc {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.signUpForm {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.gs-5 {
+    height: 5vh;
+    width: 100%;
+}
+
+.bg-img img {
+    width: 50%;
+}
+
+
+.form {
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+}
+
+.signup-form {
+    height: 100%;
+    width: 100%;
+    scale: 0.8;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+    border: 0.1vh solid transparent;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+    .signup-form h1 {
+        align-self: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.row-signup {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3vh !important;
+}
+
+    .input-box strong {
+        font-weight: 600;
+    }
+
+    .input-box input {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 3vh;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.row-signup:last-child input {
+    width: 100%;
+}
+
+.mid {
+    position: absolute;
+    right: 50%;
+    translate: 50% 0;
+}
+
+.input {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-bottom: 3vh !important;
+}
+
+    .input strong {
+        font-size: 1.7vw;
+        font-weight: 600;
+    }
+
+    .input input {
+        position: absolute;
+        bottom: 0%;
+        height: 3vh;
+        width: 100%;
+        border: 0;
+        border-bottom: 0.1vh solid black;
+    }
+
+.how-you-heard {
+    position: relative;
+    border-bottom: 0.1vh solid black;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 2vh !important;
+    justify-content: space-between;
+}
+
+    .how-you-heard i {
+        padding: 0 1vw !important;
+        cursor: pointer;
+    }
+
+.heading-signup {
+    position: relative;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .heading-signup img {
+        width: 8%;
+    }
+
+    .heading-signup h1 {
+        padding: 0vw 2vw !important;
+    }
+
+.how-you-heard strong {
+}
+
+.nb-dropdown-menu {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    bottom: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .nb-dropdown-menu input:hover {
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+
+select {
+    height: 5vh;
+    border: none;
+    border-bottom: 0.1vh solid black;
+}
+
+    select:focus {
+        border-radius: 0;
+        outline: none;
+    }
+
+    select option {
+        font-size: 1vw;
+    }
+
+.safe {
+    font-size: 1vw;
+    font-weight: 400;
+    width: 80%;
+}
+
+.action-links {
+    height: fit-content;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .action-links button {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+
+    .action-links a {
+        background-color: rgb(2, 99, 184);
+        padding: 1vh 8vw !important; /* Adjusted padding to refine the button size */
+        border: none; /* Removed border for a cleaner look */
+        border-radius: 2vw; /* Rounded corners */
+        color: white;
+        text-decoration: none; /* Removes underline from links */
+        font-size: 1.2vw; /* Increases text size for better readability */
+        font-weight: bold; /* Makes the text bold */
+        display: inline-block; /* Ensures proper spacing between buttons */
+        text-align: center; /* Centers text within the buttons */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+        margin: 0.5vh 1vw; /* Adds spacing between the buttons */
+    }
+
+    .action-links button:hover {
+        background-color: rgb(22, 131, 225); /* Darker blue on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+    }
+
+    .action-links button:active {
+        background-color: rgb(20, 117, 201); /* Even darker blue when active */
+        transform: translateY(1px); /* Slight sink on active */
+    }
+
+    .action-links button:last-child {
+        background-color: rgb(19, 19, 19);
+    }
+
+.error {
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    color: red;
+    overflow: hidden;
+    width: 100%;
+}
+
+    .error h6 {
+        font-size: 3vh;
+        animation: showUp 0.1s ease-out;
+    }
+
+@keyframes showUp {
+    0% {
+        translate: 0 -100%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    main {
+    }
+
+    .input-box strong {
+        padding-right: 5vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .input-box input {
+        width: 100% !important;
+    }
+
+    .dob strong {
+        padding-right: 10vw !important;
+        font-size: 1.7vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+        font-weight: 400;
+    }
+
+    .nb-dropdown-menu input {
+        font-size: 1.2vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1.5vw;
+    }
+}
+
+/* Styles for small to medium desktops (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    main {
+        background-color: white;
+    }
+
+    .date-of-birth {
+        font-size: 1.4vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1.5vw !important;
+        padding-right: 7vw !important;
+    }
+
+    .input strong {
+        font-size: 1.5vw !important;
+    }
+
+    .dob strong {
+        padding-right: 12vw !important;
+        font-size: 1.5vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large desktops (min-width: 1440px) */
+@media screen and (min-width: 1440px) {
+    main {
+        background-color: white;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 0.9vw;
+    }
+
+    .how-you-heard i {
+        font-size: 1vw;
+    }
+
+    .date-of-birth {
+        font-size: 0.9vw !important;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+        padding-right: 10vw !important;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+
+    .safe {
+        font-size: 0.8vw;
+    }
+}
+
+/* Styles for ultra-wide desktops (min-width: 1920px) */
+@media screen and (min-width: 1920px) {
+    main {
+        background-color: white;
+    }
+
+    .input-box strong {
+        font-size: 1vw !important;
+    }
+
+    .nb-dropdown-menu option {
+        font-size: 1vw;
+    }
+
+    .input strong {
+        font-size: 1vw !important;
+    }
+
+    .dob strong {
+        padding-right: 13vw !important;
+        font-size: 1vw !important;
+    }
+
+    .dob input {
+        width: 100% !important;
+    }
+}
+
+/* Styles for large 4K monitors (min-width: 2560px) */
+@media screen and (min-width: 2560px) {
+}
+
+/* Styles for 5K and ultra-wide monitors (min-width: 3840px) */
+@media screen and (min-width: 3840px) {
+}
+
+div {
+    display: none;
+}
+/* 
+.index {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 20vw;
+    background-color: green;
+}
+
+.main-window {
+    height: 100vh;
+    width: 80vw;
+    background-color: blue;
+}
+
+.chat {
+    height: 90%;
+    width: 100%;
+    background-color: aqua;
+}
+
+.send-box {
+    height: 10%;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-style-box {
+    height: 30%;
+    width: 100%;
+    background-color: chartreuse;
+}
+
+.send-message {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+
+.send-message-input {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .send-message-input input {
+        height: 100%;
+        width: 100%;
+        border: 0.1vh solid black;
+        border-radius: 2vw;
+    }
+
+.send-message button {
+    height: 100%;
+    width: 10%;
+    color: red;
+}
+
+.message {
+    height: fit-content;
+    width: 100%;
+    background-color: crimson;
+    padding: 1% 0 !important;
+    display: flex;
+}
+
+.pfp {
+    margin: 0 1vw !important;
+    width: 3vw;
+    height: 3vw;
+    border: 0.1vh solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+.message-details {
+    height: 3vw;
+    width: 100%;
+    background-color: gold;
+    display: flex;
+}
+
+.content {
+    width: calc(100% - 10vw);
+    height: fit-content;
+}
+
+    .content h1 {
+        height: 2vw;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        font-size: 1.5vw;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .content p {
+        font-size: 1vw;
+    } */
+.phone {
+    height: 100%;
+    width: 100%;
+display: flex;
+flex-direction: column;
+overflow-y: visible;
+--phone_h: 1dvh;
+--chat-phone_h: 90dvh; 
+}
+.sidebar-phone {
+    position: absolute;
+    top: 0;
+    height: var(--phone_h);
+    width: 100vw;
+    background-color: gold;
+}
+.main-window-phone {
+    margin-top: var(--phone_h) !important;
+    height: calc(100dvh - var(--phone_h));
+    width: 100%;
+    background-color: aqua;
+}
+.chat-phone {
+    height: var(--chat-phone_h);
+    width: 100%;
+    background-color: blue;
+}
+.send-box-phone {
+    height: calc(100vh - (var(--chat-phone_h) + var(--phone_h)));
+width: 100%;
+background-color: brown;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.input-message-phone {
+    width: 90%;
+    height: 70%;
+    background-color: chartreuse;
+border: 1px solid transparent;
+border-radius: 5dvh;
+}
+
+
+
+    @media screen and (max-width: 485px) {
+#PageForPC {
+display: none;
+}
+#PageForPhone {
+    background-color: red;
+    display: block;
+}
+    }
+
+
+
+
+
+
+
+
+
+                
+</style>
+<section class="blur" id="blur" onclick="closeAccountInfo()">
+</section>
+<section class="index" id="indexPage">
+    <section class="sidebar" id="sidebar">
+        <span id="blur-visibility"></span>
+
+        <section class="sidebar-actions">
+            <section class="history">
+                <h1 id="History">History</h1>
+                <section class="history-actions">
+                    <i onclick="printArray()" class="fa-solid fa-pencil"></i>
+                </section>
+            </section>
+            <section class="close-sidebar" onclick="accountInfo()">
+                <i class="fa-solid fa-circle-user"></i>
+            </section>
+            <section class="accountDetails" id="account-details">
+                <i class="fa-regular fa-circle-user"></i>
+                <section class="account-details-information">
+                    <h1>@user.FirstName @user.MiddleName @user.LastName</h1>
+                    <h2>@user.UserUniqueId</h2>
+                    <h2>@user.Email</h2>
+                    <a asp-action="Logout" asp-controller="Home" class="logout">
+                        <i class="fa-solid fa-door-closed"></i>
+                        <i class="fa-solid fa-door-open"></i>
+                    </a>
+                </section>
+            </section>
+        </section>
+        <section class="gs-5"></section>
+
+        <section class="chat-history-container" id="chatHistoryContainer">
+
+            <section class="gs-5"></section>
+
+        </section>
+
+    </section>
+    <section class="main-window">
+        <section class="chat" id="chat">
+
+            <section class="chatsForHistory" id="chatsForHistory">
+
+                <section class="my-chat"></section>
+
+                <span class="prevent">
+                    <h1>You can't send message again.</h1>
+                    <button onclick="removeChats()" id="GoToCurrentChat">Current Chat</button>
+                </span>
+
+
+
+
+
+
+
+
+
+            </section>
+            <section class="message userMessage">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Hi</p>
+                </section>
+            </section>
+            <section class="message">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Hello how can I help you?</p>
+                </section>
+
+            </section>
+            <section class="message userMessage">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Let's talk about transformers</p>
+                </section>
+            </section>
+            <section class="message">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Alright let's get into the topic!</p>
+                </section>
+
+            </section>
+            <section class="message userMessage">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>I like iron hide</p>
+                </section>
+            </section>
+            <section class="message">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Nice</p>
+                </section>
+
+            </section>
+            <section class="message userMessage">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Tell me about rx 580</p>
+                </section>
+            </section>
+            <section class="message">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Rx580 is a 8gb graphic card made by AMD it is known for it's large vram in budget</p>
+                </section>
+
+            </section>
+            <section class="message userMessage">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>I'm buying one</p>
+                </section>
+            </section>
+            <section class="message">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Yeah it is a pretty good choice it can help in gaming</p>
+                </section>
+
+            </section>
+            <section class="message userMessage">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>I don't play games I am buying for blender 3d</p>
+                </section>
+            </section>
+            <section class="message">
+
+                <section class="pfp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                </section>
+                <section class="content">
+                    <h1>${userDetails.firstName}</h1>
+                    <p>Yeah it is a pretty good choice it can help in Rendering animation</p>
+                </section>
+
+            </section>
+        </section>
+        <section class="send-box">
+            <section class="send-style-box">
+            </section>
+            <section class="send-message" id="send-message">
+                <section class="send-message-input"><input id="userInput" type="text" placeholder="Type here"></section>
+                <button id="sendMessageButton"> <i id="send-icon" class="fa-solid fa-caret-right"></i></button>
+            </section>
+        </section>
+    </section>
+</section>
+<script>
+    var chats = [];
+    var base = document.getElementById("chatsForHistory");
+    var idForHistory = 0;
+    function loadChats(id) {
+        console.log("Gen")
+        let chatHistory = document.getElementsByClassName("chat-history");
+        let myChat = document.getElementsByClassName("my-chat");
+        for (let i = 0; i < myChat.length; i++) {
+            myChat[i].style.display = "none";
+            if (myChat[i].id == id) {
+                console.log("Found ID")
+                myChat[i].style.display = "block";
+                document.getElementById("chatsForHistory").style.display = "block";
+            }
+        }
+
+
+
+        // console.log("Loading chat")
+        // base.style.display = "block";
+        // base.querySelectorAll("section").forEach(section => section.remove())
+        // let continueIndex = 0;
+        // for (let k = 0; k < (response.history[index].length - 1); k += 1) {
+
+        //     if (response.history[index][continueIndex] == "@user.UserUniqueId") {
+        //         break;
+        //     }
+
+        //     base.innerHTML += `<section class="message userMessage">
+
+        //     <section class="pfp">
+        //         <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+        //         </section>
+        //             <section class="content">
+        //                 <h1>User</h1>
+        //                 <p>${response.history[index][continueIndex]}</p>
+        //                 </section>`;
+        //     continueIndex += 1;
+        //     base.innerHTML += `<section class="message">
+
+        //                 <section class="pfp">
+        //                     <img src="https://img.freepik.com/premium-vector/circuit-board-icon_501557-617.jpg" alt="image" border="0">
+        //                     </section>
+        //                     <section class="content">
+        //                         <h1>Unify Bot</h1>
+        //                         <p>${response.history[index][continueIndex]}</p>
+        //         </section>`;
+        //     continueIndex += 1;
+        // }
+    }
+    function removeChats() {
+
+        base.style.display = "none";
+    }
+    var conversation = [];
+
+    function generateHistory(response) {
+        for (let index = 0; index < response.history.length; index++) {
+
+            let sidebar = document.getElementById("chatHistoryContainer");
+            let chatHistory = document.createElement("section");
+            chatHistory.className = "chat-history";
+            sidebar.appendChild(chatHistory);
+            let historyHeading = document.createElement("section");
+            historyHeading.className = "history-heading";
+            chatHistory.appendChild(historyHeading);
+            let h1 = document.createElement("h1");
+            let heading = (response.history[index].length - 1) - 1;
+
+            console.log("Headiing: " + heading.value)
+            h1.innerText = heading;
+            historyHeading.appendChild(h1);
+            let chatHistoryDatetime = document.createElement("section");
+            chatHistoryDatetime.className = "chat-history-datetime";
+            chatHistory.appendChild(chatHistoryDatetime);
+            let strong = document.createElement("strong");
+            strong.innerText = "11/14/2024 12:21";
+            chatHistoryDatetime.appendChild(strong);
+            let i = document.createElement("i");
+            i.className = "fa-solid fa-trash";
+            chatHistoryDatetime.appendChild(i);
+        }
+
+
+
+
+
+    } // function end
+
+    // original code
+    // window.addEventListener("load", function checkSection() {
+    //     let userMessage = document.getElementsByClassName("message")
+    //     let botMessage = document.getElementsByClassName("message")
+    //     setTimeout(function () {
+    //         for (let i = 0; i < userMessage.length; i++) {
+    //             console.log("....")
+    //             if (userMessage[i].className === "message userMessage") {
+    //                 conversation.push(userMessage[i].querySelector("p").innerText)
+    //                 conversation.push(botMessage[i + 1].querySelector("p").innerText)
+    //             }
+
+    //         }
+    //         $.ajax({
+    //             url: `@Url.Action("GetJavaScriptArray", "Home")`,
+    //             type: "POST",
+    //             data: {
+    //                 conversation: conversation
+    //             },
+    //             success: function(response) {
+
+    //             }
+    //         });
+
+    //     }, 10000)
+    // });
+
+    document.getElementById("History").addEventListener("click", function checkSection() {
+        let userMessage = document.getElementsByClassName("message")
+        let botMessage = document.getElementsByClassName("message")
+        setTimeout(function () {
+            for (let i = 0; i < userMessage.length; i++) {
+                console.log("....")
+                if (userMessage[i].className === "message userMessage") {
+                    conversation.push(userMessage[i].querySelector("p").innerText)
+                    conversation.push(botMessage[i + 1].querySelector("p").innerText)
+                }
+
+            }
+            $.ajax({
+                url: `@Url.Action("GetJavaScriptArray", "Home")`,
+                type: "POST",
+                data: {
+                    conversation: conversation
+                },
+                success: function (response) {
+                    console.log("The json: ")
+                    console.log(response)
+
+                    if (response.repeatedMessages != "true") {
+
+
+                        // console.log(response.history[0][5])
+                        for (let index = 0; index < response.history.length; index++) {
+                            let chatSection = [];
+                            let sectionLength = response.history[index].length;
+                            let headingIndex = sectionLength - 2;
+                            let heading = response.history[index][headingIndex];
+                            let datetimeIndex = sectionLength - 1;
+                            let datetime = response.history[index][datetimeIndex];
+                            let sidebar = document.getElementById("chatHistoryContainer");
+                            let chatHistory = document.createElement("section");
+                            chatHistory.className = "chat-history";
+                            chatHistory.id = idForHistory;
+                            idForHistory++
+                            chatHistory.setAttribute("onclick", "loadChats(this.id)")
+                            sidebar.appendChild(chatHistory);
+                            let historyHeading = document.createElement("section");
+                            historyHeading.className = "history-heading";
+                            chatHistory.appendChild(historyHeading);
+                            let h1 = document.createElement("h1");
+                            h1.innerText = heading;
+                            historyHeading.appendChild(h1);
+                            let chatHistoryDatetime = document.createElement("section");
+                            chatHistoryDatetime.className = "chat-history-datetime";
+                            chatHistory.appendChild(chatHistoryDatetime);
+                            let strong = document.createElement("strong");
+                            strong.innerText = datetime;
+                            chatHistoryDatetime.appendChild(strong);
+                            let i = document.createElement("i");
+                            i.className = "fa-solid fa-trash";
+                            chatHistoryDatetime.appendChild(i);
+                            let myChat = document.createElement("section");
+                            myChat.className = "my-chat";
+                            myChat.id = chatHistory.id;
+                            document.getElementById("chatsForHistory").appendChild(myChat);
+                            console.log("Loading chat")
+                            // base.style.display = "block";
+                            // base.querySelectorAll("section").forEach(section => section.remove())
+                            myChat.querySelectorAll("section").forEach((section) => section.remove())
+
+                            let continueIndex = 0;
+                            for (let k = 0; k < (response.history[index].length - 1); k += 1) {
+
+                                if (response.history[index][continueIndex] == "@user.UserUniqueId") {
+                                    break;
+                                }
+
+                                myChat.innerHTML += `<section class="message userMessage">
+
+                        <section class="pfp">
+                            <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                            </section>
+                                <section class="content">
+                                    <h1>User</h1>
+                                    <p>${response.history[index][continueIndex]}</p>
+                                    </section>`;
+                                continueIndex += 1;
+                                myChat.innerHTML += `<section class="message">
+
+                                    <section class="pfp">
+                                        <img src="https://img.freepik.com/premium-vector/circuit-board-icon_501557-617.jpg" alt="image" border="0">
+                                        </section>
+                                        <section class="content">
+                                            <h1>Unify Bot</h1>
+                                            <p>${response.history[index][continueIndex]}</p>
+                            </section>`;
+                                continueIndex += 1;
+                            }
+                            myChat.style.display = "none";
+
+
+
+
+
+
+
+
+
+
+
+
+                        }
+                    }
+                }
+            });
+
+        }, 1000)
+    });
+    function printArray() {
+        for (let i = 0; i < chats.length; i++) {
+            console.log(chats[i])
+        }
+    }
+
+    var blurBG = document.getElementById("blur");
+    var accountDetails = document.getElementById("account-details");
+    function accountInfo() {
+        blurBG.style.opacity = "0.1";
+        blurBG.style.display = "block";
+        accountDetails.style.scale = "1";
+        accountDetails.style.opacity = "1";
+
+    }
+    function closeAccountInfo() {
+        blurBG.style.opacity = "0";
+        blurBG.style.display = "none";
+        accountDetails.style.scale = "0";
+        accountDetails.style.opacity = "0";
+
+    }
+    // corrector side project
+    //     var stop = false;
+
+    //        userInputValue.addEventListener("input" , function () {
+    //         setTimeout(function() {
+
+    //             let word = userInputValue.value.trim();
+    // console.log(`Input: ${word}`)
+    //             if (word.includes("Hell")) {
+    //  if (!stop) {
+    //     stop = true;
+    //  for(let i = 0; i < userInputValue.value.trim().includes("Hell").length; i++)
+    // {
+
+    // }
+    // }
+    // }
+
+    //         } , 1000);
+    //  stop = false;
+    //     })
+    // false = loading
+    // true = loaded
+    function loadingResponse() {
+        let sendMessage = document.getElementById("send-message");
+        let blockAnotherResponse = document.createElement("span");
+        blockAnotherResponse.id = "block";
+        sendMessage.appendChild(blockAnotherResponse);
+        document.getElementById("send-icon").setAttribute("class", "fa-solid fa-ban")
+    }
+    function loadedResponse() {
+        document.getElementById("block").remove();
+        document.getElementById("send-icon").setAttribute("class", "fa-solid fa-caret-right")
+
+    }
+    function generateBotResponse(response, userDetails) {
+        loadedResponse();
+
+        let chat = document.getElementById("chat");
+        chat.innerHTML += `<section class="message userMessage">
+
+                                                        <section class="pfp">
+                                                                <img src="https://cdn-icons-png.flaticon.com/512/758/758771.png" alt="image" border="0">
+                                                        </section>
+                                                <section class="content">
+                                                    <h1>${userDetails.firstName}</h1>
+                                                    <p>${document.getElementById("userInput").value.trim()}</p>
+                                                </section>`;
+        chat.innerHTML += `<section class="message">
+
+                                                        <section class="pfp">
+                                                                <img src="https://img.freepik.com/premium-vector/circuit-board-icon_501557-617.jpg" alt="image" border="0">
+                                                        </section>
+                                                <section class="content">
+                                                    <h1>Unify Bot</h1>
+                                                <p>${response}</p>
+                                                </section>`;
+
+        document.getElementById("userInput").value = "";
+    }
+
+    document.getElementById("sendMessageButton").addEventListener("click", function () {
+        let userInput = document.getElementById("userInput").value.trim();
+        loadingResponse();
+
+        $.ajax({
+            url: `@Url.Action("GenerateResponse", "Home")`,
+            type: "POST",
+            data: {
+                userInput: userInput,
+
+            },
+            success: function (response) {
+                console.log(response);
+                generateBotResponse(response.message, response.userDetails);
+
+            }
+        });
+    });
+
+    // kaal history ka frontend bana na hai fir logic lagana hai fir side bar close karna hai
+</script>
+
+        </section>
+    </main>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main id="PageForPhone">
+        <section class="phone">
+            <!-- @RenderBody(); -->
+
+<section class="sidebar-phone">
+
+</section> 
+<!-- sidebar that will show history as well -->
+<section class="main-window-phone">
+<section class="chat-phone">
+
+</section>
+<section class="send-box-phone">
+
+<section class="input-message-phone">
+    
+</section>
+
+</section>
+</section>
+
+        </section>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- @*     <script src="~/js/script.js"></script> *@ -->
+</body>
+</html>
